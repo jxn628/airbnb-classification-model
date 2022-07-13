@@ -158,7 +158,10 @@ In my analysis of Airbnb rentals in San Diego California, I found that having a 
 -- This can be structured in such a way to incentivize clients transitioning to OPMs full management service at certain thresholds (ie, 10 properties, etc).
 - <b>Communication: </b>OPM can train hosts on what they can do to set expectations properly, and then exceed them with service (AirBnb's goal). This is done through how they communicate and how often they do it.
 
+### Links
+[Final Jupyter Notebook](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
 
+[Presentation](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
 
 
 
