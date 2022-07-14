@@ -124,6 +124,7 @@ Accuracy is by far the most important feature in my model. Let's look at the rel
 - <b>73% of units that scored 4.9-5.0 on accuracy were in our target 5-star range.</b>
 - They are less likely to use the instant book feature, although 41% of units with 5.0 accuracy do each.
 
+
 ## Questions Answered
 
 ### Is there a significant advantage to being a Superhost? (is it worth all the effort to get this status and maintain it?)
@@ -154,6 +155,8 @@ Accuracy is by far the most important feature in my model. Let's look at the rel
 - Elite Overall units score much higher in review metrics. This makes sense because they should have to score high in all of them to get a high overall score (even though it is a seperate metric in terms of AirBnb).
 - They are also more likely to be a superhost, and more likely to have less than 5 listings.
 - They are less likely to have high Capacity, or use Instant Book feature, but the differences aren't major.
+
+![Analysis of Elite Units](https://github.com/jxn628/dsc-phase-5-project/blob/main/Images/AirBnb_Project_Images/Annotated_Features.png)
 
 ## Conclusion
 
