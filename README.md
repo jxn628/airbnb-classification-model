@@ -175,12 +175,22 @@ In my analysis of Airbnb rentals in San Diego California, I found that having a 
 - do this without being deceptive or cooercive.
 - It doesn't matter if Hosts have all the metrics and analysis to <b>know</b> that their unit deserves 5-star reviews. Their fate is in the hands of the reviewers. If they really care about getting 5 star reviews (and they should since they are critical to success on AirBnb), they need to explain this to their guests. 
 
+## Further Work
 
+### Use Natural Language Processing to analyze amenities.
+- This DataSet includes <b>amenities, which would be very benefical to both the model and industry analysis.</b> 
+- However, they are all in string format and getting them into a useful format will be time intensive. 
+- Get them into a format where they can be one-hot encoded and fed into the model.
+
+### Increase the scope of this model.
+- Incorporate data from the rest of California, and then the rest of the US.
 
 ## Links
 [Final Jupyter Notebook](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
 
 [Presentation](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
+
+
 
 
 
