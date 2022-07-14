@@ -1,25 +1,25 @@
 # Using Predictive Modeling to Get More 5-Star AirBnb Reviews
 
-Airbnb has revolutionized the hotel and vacation industries by allowing people easily rent their houses out to other travelers. However, it can sometimes be hard for Airbnb Hosts to be as successful as they would like to be. The most common question from Hosts are "What can I do to get more 5-star reviews and get a 5.0 Overall Rating?" This project uses data for the city of San Diego from [InsideAirbnb.com](https://insideairbnb.com) to create a model which can predict whether a Rental Unit should get a 5.0 Overall Rating with 83% Precision.
+Airbnb has revolutionized the hotel and vacation industries by allowing people to easily rent their own houses out to other travelers. However, it can sometimes be hard for Airbnb Hosts to be as successful as they would like to be. The most common question from Hosts are "What can I do to get more 5-star reviews and a 5.0 Overall Rating?" This project uses data for the city of San Diego from [InsideAirbnb.com](https://insideairbnb.com) to create a model which can predict whether a Rental Unit should get a 4.9-5.0 Overall Rating with 83% Precision.
 
 ![Solutions to Problem](https://github.com/jxn628/dsc-phase-5-project/blob/main/Images/AirBnb_Project_Images/Solutions%20to%20Negative%20Trend.png)
 
 Oceanside Property Management is a property management company located in San Diego California. Their main business is managing rental properties. However, they have recently noticed that a lot of Airbnb hosts have been reaching out to them for guidance. These hosts are mostly uninterested in having OPM manage their rentals, however they wany some help in increasing their success as Airbnb hosts.
 
-There have been so many Airbnb hosts reaching out that OPM has decided that this can be a good side-business for them. So they plan to officially addmairbnb consulting as a service that they provide. In their initial research they found that the top questions that potential clients who wish to utlize this service are:
+There have been so many Airbnb hosts reaching out that OPM has decided that this can be a good side-business for them. They plan to officially add Airbnb consulting as a service that they provide. In their initial research they found that the top questions that potential clients who wish to utlize this service are:
 - <b>1) "What can I do to get more 5 star ratings?"</b>
 - <b>2) "Can you help me reach Superhost status? (or maintain Superhost status)</b>
 
 These questions are understandable because Airbnb puts a huge focus on getting 5 star overall ratings. They also highly publicize the benefits of getting (and maintaining) Superhost status.
 
 Oceanside Property Management has decided that the main focus of their service will be helping clients get more 5 star reviews. Therefore they have tasked me with providing the following: 
-- 1) <b>A model</b> that will predict whether a specific rental unit should get a 5 Star Overall score based on other available information.
-- 2) <b>An industry analysis of AirBnb in San Diego.</b> Specifically looking for any insight that they can give to their clients that will give them a leg up on people who don't use their consulting service.
+- <b>1)A model</b> that will predict whether a specific rental unit should get a 5 Star Overall score based on other available information.
+- <b>2)An industry analysis of AirBnb in San Diego.</b> Specifically looking for any insight that they can give to their clients that will give them a leg up on people who don't use their consulting service.
 
 They also want me to answer the following questions:
-- 1) Is there a significant advantage to being a Superhost? (is it worth all the effort to get this status and maintain it?)
+- 1)Is there a significant advantage to being a Superhost? (is it worth all the effort to get this status and maintain it?)
 - 2)How do we determine whether a Host "should" be getting 5 Star reviews?
-- 3) What factors are most important in determining a 5 Star Overall Rating? (what aspects should they most focus on)
+- 3)What factors are most important in determining a 5 Star Overall Rating? (what aspects should they most focus on)
 
 And finally, they want to know where their consulting service can make the most impact, so they know which features to market and/or which hosts to market to.
 
@@ -30,7 +30,7 @@ Information from: https://listwithclever.com/research/airbnb-vs-hotels-study/ ac
 - 68% of business travelers prefer staying in hotels when traveling for work, and they're more likely to have a negative experience at an Airbnb
 
 ### Importance of 5 Star Reviews
-AirBnb focuses on exceeding customer expectations, which is why they strictly require that hosts maintain a near perfect rating in order to remain on the service.
+AirBnb focuses on exceeding customer expectations, which is why they strictly <b>require that hosts maintain a near perfect rating in order to remain on the service.</b>
 
 ### Importance of Superhost
 - information from https://www.airbnb.com/d/superhost. Accessed 6/16/22
@@ -48,14 +48,22 @@ AirBnb focuses on exceeding customer expectations, which is why they strictly re
 
 ### Problems with the AirBnb Review Scale
 The review data is incredibly skewed because Airbnb requires such a high rating. <b>Even though there is a 5 point scale, Anything lower than a 4.8 is seen as "bad".</b>
-- So while this is technically a 5pt scale (as a reviewer can give 1 - 5 stars, with no partial stars allowed), getting a 4.0 average could result in being de-listed from the service!
+- So while this is technically a 5 point scale (as a reviewer can give 1 - 5 stars, with no partial stars allowed), getting a 4.0 average could result in being de-listed from the service!
 
 The major problem with this review system is that <b>airbnb guests often assume that airbnb's review scale functions similarly to a hotel review scale, which also uses 5 stars</b>, with 3 considered average, 4 above average, and 5 star being the best possible experience.
 
+from https://medium.com/@campbellandia/how-to-avoid-the-dreaded-4-star-review-a-guide-for-airbnb-hosts-cdf482d083fe
+- <i>The problem stems from the fundamental difference in what most people think a 5-star rating system is, and what AirBnB’s system actually is. The vast majority of people think that a 4-star review is perfectly appropriate; Their stay was good, they enjoyed themselves, but your place wasn’t the Vanderbilt Suite at the Plaza. What they don’t understand is that if a listing gets too many 4-star reviews the AirBnB platform begins to send warnings to hosts that their listing will be removed.</i>
+
+
+## The Problem
+![The Problem: Relationship between Overall Rating and Number of Listings](http://localhost:8888/view/Images/AirBnb_Project_Images/Trend%20with%20Units%20Listed%20Annotated.png)
+
+
 ## Target: Elite Units
-- Classifies whether a unit is in our target 4.9 - 5.0 overall rating range or not.
-- Elite Units: Any Unit with a 4.9-5.0 Overall Rating.
+- <u>Elite Units</u>: Any Unit with a 4.9-5.0 Overall Rating.
 - - 4.9 is still an incredibly high score, and is above thresholds for success (4.8 rating, etc), so it is well worth capturing units with a 4.9 Rating as high performers as well.
+
 
 ## Choosing Model Evaluation Metrics
 - My goal is to predict whether a person will get a 4.9-5.0 Airbnb Overall rating.
@@ -69,7 +77,7 @@ The major problem with this review system is that <b>airbnb guests often assume 
 - If it misses some of the Elite units in the process, that is fine.
 - <b>Therefore, I am most concerned with Precision, balanced out by F1 score.</b>
 
-## Final Model Evaluation:
+## Final Model Evaluation: Decision Tree 2
 - <b> Precision: </b> This Model correctly picks whether a rental will have an overall AirBnb rating between 4.9-5.0, 83% of the time.
     - This is 33% better than random guessing.
     - The Final Model is also a improvement over the baseline model. (about 7% better)
@@ -82,7 +90,8 @@ The major problem with this review system is that <b>airbnb guests often assume 
 ## How to use This Model going forward:
 - OPM can take the data from new clients and run the model to determine whether they are performing at 5-Star level or not.
 - If they are, they should be able to obtain Superhost status and OPM can focus on helping them <b> maintain </b> everything that they are doing right.
-- If they are not a 5-Star rental unit, OPM can give them advice and help get them to 5-Star status.
+- If they are not an Elite Unit, OPM can give them advice and help get them closer to a 5.0 Overall Rating.
+
 <b>Caveats: </b>
 - No model is perfect, and this one certainly isn't.
 - This model relies on review scores from the 6 review categories. <b>If you don't have that data, the model does not perform reliably enough to be used.</b>
@@ -123,7 +132,7 @@ Accuracy is by far the most important feature in my model. Let's look at the rel
 
 - <b>YES!</b>
 - <b>Superhosts are 21% more likely to be Elite Units than non-superhosts.</b>
-- <u>Superhosts and the 4 Important Features:</u>
+- <u>Superhosts and the 4 Most Important Features:</u>
 - 81% of Superhosts have at least 4.9 Communication Score. (30% better than non-superhosts)
 - 64% of Superhosts have at least 4.9 Accuracy Score. (26% better than non-superhosts)
 - Superhosts have similar Value Scores to Non-Superhosts.
@@ -138,12 +147,12 @@ Accuracy is by far the most important feature in my model. Let's look at the rel
 #### Analysis: 
 - While Elite Units perform slightly better in booking rate, <b>being an Elite unit is the best solution to the negative trend between Overall Rating and Number of Units.</b>
 - <b> As long as you can keep your units performing at the highest levels, there is no limit on how many units you list.</b>
-- The catch is of course, learning how many that you can manage and keep at that level. This is an area where OPMs service will be invaluable!
+- The catch is of course, learning how many that you can manage and keep at that level. <b>This is an area where OPMs service will be invaluable!</b>
 - Offer resources to help Hosts. (Preferrred cleaners, stagers, contractors for emergencies. Maybe even a dedicated customer service phone number)
 - Most Notably, <b>Elite Units have the biggest increase in the Top Features: accuracy, cleanliness, value, and communication.</b>
-- <b>This shows that our Target does a good job of capturing the features that lead to more 5 Star Overall Reviews!</b>
+- <b>This shows that the Target Feature does a good job of capturing the features that lead to more 5 Star Overall Reviews!</b>
 - Elite Overall units score much higher in review metrics. This makes sense because they should have to score high in all of them to get a high overall score (even though it is a seperate metric in terms of AirBnb).
-- they are also more likely to be a superhost, and more likely to have less than 5 listings.
+- They are also more likely to be a superhost, and more likely to have less than 5 listings.
 - They are less likely to have high Capacity, or use Instant Book feature, but the differences aren't major.
 
 ## Conclusion
@@ -152,11 +161,18 @@ In my analysis of Airbnb rentals in San Diego California, I found that having a 
 - I also found that Accuracy was the biggest factor in getting a high overall rating, with a nearly 1 to 1 linear relationship.
 - Other important features were Value, Cleanliness, & Communication.
 
-<b> Areas for OPM to Capitalize on:</b>
+<b> Key Areas for OPM's AirBnb Host Consulting Service :</b>
 - <b>Accuracy:</b> By providing a listing service which assesses client's rental units and lists their units in such a way as to maximize the accuracy. 
 - <b>Bridging the Gap between Owner-Managed and OPM Managed:</b> OPM can provide a la carte services which help owners who wish to keep managing their own properties, but can't handle doing so at the highest quality levels. <b> This is also beneficial to OPM in creating a pipeline of potential fully managed units as hosts take on more properties that they can manage. </b>
 -- This can be structured in such a way to incentivize clients transitioning to OPMs full management service at certain thresholds (ie, 10 properties, etc).
 - <b>Communication: </b>OPM can train hosts on what they can do to set expectations properly, and then exceed them with service (AirBnb's goal). This is done through how they communicate and how often they do it.
+- <b> Provide Resources to Help Hosts Set Guest Expectations, and Then Exceed Them!</b>
+- accurate listing
+- explanation of airbnb's skewed review system.
+- do this without being deceptive or cooercive.
+- It doesn't matter if Hosts have all the metrics and analysis to <b>know</b> that their unit deserves 5-star reviews. Their fate is in the hands of the reviewers. If they really care about getting 5 star reviews (and they should since they are critical to success on AirBnb), they need to explain this to their guests. 
+
+
 
 ## Links
 [Final Jupyter Notebook](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
