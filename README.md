@@ -57,7 +57,7 @@ from https://medium.com/@campbellandia/how-to-avoid-the-dreaded-4-star-review-a-
 
 
 ## The Problem
-![The Problem: Relationship between Overall Rating and Number of Listings](http://localhost:8888/view/Images/AirBnb_Project_Images/Trend%20with%20Units%20Listed%20Annotated.png)
+![The Problem: Relationship between Overall Rating and Number of Listings](https://github.com/jxn628/dsc-phase-5-project/blob/main/Images/AirBnb_Project_Images/Trend%20with%20Units%20Listed%20Annotated.png)
 
 
 ## Target: Elite Units
