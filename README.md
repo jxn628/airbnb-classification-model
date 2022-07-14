@@ -188,7 +188,7 @@ In my analysis of Airbnb rentals in San Diego California, I found that having a 
 ## Links
 [Final Jupyter Notebook](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
 
-[Presentation](https://github.com/jxn628/dsc-phase-5-project/blob/main/final_notebook.ipynb)
+[Presentation](https://github.com/jxn628/dsc-phase-5-project/blob/main/Airbnb_Project%20Slides.pdf)
 
 
 
