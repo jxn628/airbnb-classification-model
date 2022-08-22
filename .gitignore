@@ -10,3 +10,4 @@ data/listings.csv
 data/listings.csv.gz
 Data/reviews.csv.gz
 
+.ipynb_checkpoints/
