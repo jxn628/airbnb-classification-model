@@ -3,7 +3,9 @@
 .Save_State_7_12.ipynb
 .student_with_amenities.ipynb
 .Airbnb_Project Slides.pdf
-
+.listings.csv
+.listings.csv.gz
+.reviews.csv.gz
 
 #Data Files
 data/listings.csv
