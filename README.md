@@ -186,9 +186,12 @@ In my analysis of Airbnb rentals in San Diego California, I found that having a 
 - Incorporate data from the rest of California, and then the rest of the US.
 
 ## Links
+
+[Video Presentation of this Project with Q&A](https://youtu.be/1LiVc96g69g?t=880)
+
 [Final Jupyter Notebook](https://github.com/jxn628/dsc-phase-5-project/blob/main/EDA-Modeling-Evaluation.ipynb)
 
-[Presentation](https://github.com/jxn628/dsc-phase-5-project/blob/main/Airbnb_Classification_Model_Presentation.pdf)
+[Presentation Slides](https://github.com/jxn628/dsc-phase-5-project/blob/main/Airbnb_Classification_Model_Presentation.pdf)
 
 
 
