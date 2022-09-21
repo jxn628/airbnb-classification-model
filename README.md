@@ -1,19 +1,19 @@
 # Using Predictive Modeling to Get More 5-Star AirBnb Reviews
 
-Airbnb has revolutionized the hotel and vacation industries by allowing people to easily rent their own houses out to other travelers. However, it can sometimes be hard for Airbnb Hosts to be as successful as they would like to be. The most common question from Hosts are "What can I do to get more 5-star reviews and a 5.0 Overall Rating?" This project uses data for the city of San Diego from [InsideAirbnb.com](https://insideairbnb.com) to create a model which can predict whether a Rental Unit should get a 4.9-5.0 Overall Rating with 83% Precision.
+Airbnb has revolutionized the hotel and vacation industries by allowing people to easily rent their own houses out to other travelers. However, it can sometimes be hard for Airbnb Hosts to be as successful as they would like to be. The most common question from AirBnb Hosts is "What can I do to get more 5-star reviews and a 5.0 Overall Rating?" This project uses data for the city of San Diego from [InsideAirbnb.com](https://insideairbnb.com) to create a model which can predict whether a Rental Unit will get a 4.9-5.0 Overall Rating with 83% Precision.
 
 ![Solutions to Problem](https://github.com/jxn628/dsc-phase-5-project/blob/main/Images/AirBnb_Project_Images/Solutions%20to%20Negative%20Trend.png)
 
-Oceanside Property Management is a property management company located in San Diego California. Their main business is managing rental properties. However, they have recently noticed that a lot of Airbnb hosts have been reaching out to them for guidance. These hosts are mostly uninterested in having OPM manage their rentals, however they wany some help in increasing their success as Airbnb hosts.
+Oceanside Property Management is a property management company located in San Diego California. Their main business is managing rental properties. However, they have recently noticed that a lot of Airbnb hosts have been reaching out to them for guidance. These hosts are mostly uninterested in having OPM manage their rentals, however they want some help in increasing their success as Airbnb hosts.
 
-There have been so many Airbnb hosts reaching out that OPM has decided that this can be a good side-business for them. They plan to officially add Airbnb consulting as a service that they provide. In their initial research they found that the top questions that potential clients who wish to utlize this service are:
+There have been so many Airbnb hosts reaching out that OPM has decided that AirBnb host consulting could be a good side-business for them. They plan to officially add Airbnb consulting as a service that they provide. In their initial research they found that the top questions that potential clients who wish to utlize this service are:
 - <b>1) "What can I do to get more 5 star ratings?"</b>
 - <b>2) "Can you help me reach Superhost status? (or maintain Superhost status)</b>
 
 These questions are understandable because Airbnb puts a huge focus on getting 5 star overall ratings. They also highly publicize the benefits of getting (and maintaining) Superhost status.
 
 Oceanside Property Management has decided that the main focus of their service will be helping clients get more 5 star reviews. Therefore they have tasked me with providing the following: 
-- <b>1)A model</b> that will predict whether a specific rental unit should get a 5 Star Overall score based on other available information.
+- <b>1)A model</b> that will predict whether a specific rental unit will get a 5 Star Overall score based on other available information.
 - <b>2)An industry analysis of AirBnb in San Diego.</b> Specifically looking for any insight that they can give to their clients that will give them a leg up on people who don't use their consulting service.
 
 They also want me to answer the following questions:
@@ -62,7 +62,7 @@ from https://medium.com/@campbellandia/how-to-avoid-the-dreaded-4-star-review-a-
 
 ## Target: Elite Units
 - <u>Elite Units</u>: Any Unit with a 4.9-5.0 Overall Rating.
-- - 4.9 is still an incredibly high score, and is above thresholds for success (4.8 rating, etc), so it is well worth capturing units with a 4.9 Rating as high performers as well.
+- - 4.9 is still an incredibly high score, and is above thresholds for success (4.8 rating, etc), so it is worth capturing units with a 4.9 Rating as high performers as well.
 
 
 ## Choosing Model Evaluation Metrics
@@ -88,7 +88,7 @@ from https://medium.com/@campbellandia/how-to-avoid-the-dreaded-4-star-review-a-
 ![Final Model Confusion Matrix](https://github.com/jxn628/dsc-phase-5-project/blob/main/Images/AirBnb_Project_Images/Final%20Model%20Confusion%20Matrix.png)
 
 ## How to use This Model going forward:
-- OPM can take the data from new clients and run the model to determine whether they are performing at 5-Star level or not.
+- OPM can take the data from new clients and run this model to determine whether they are performing at 5-Star level or not.
 - If they are, they should be able to obtain Superhost status and OPM can focus on helping them <b> maintain </b> everything that they are doing right.
 - If they are not an Elite Unit, OPM can give them advice and help get them closer to a 5.0 Overall Rating.
 
@@ -116,7 +116,7 @@ Accuracy is by far the most important feature in my model. Let's look at the rel
 ### Analysis:
 -  There is a linear relationship between the two. Whatever the Accuracy Score is, the Overall Rating will likely be very similar as there is a nearly direct linear relationship.
 - <b>Therefore, focusing on Accuracy is the best way to get 5 Star Reviews.</b>
-- This matches what I found in my research. <b>The most important aspect of renting an AirBnb is that the listing is accurate, to ensure that Guest expectations are met.</b>
+- This matches what I found in my research. <b>The most important aspect of renting an AirBnb unit is that the listing is accurate, to ensure that Guest expectations are met.</b>
 - Nearly all units that have an accuracy score of 4.9-5.0 also scored high in the other 5 review metrics.
 - Nearly all units that did not have an accuracy score of 5 did not score highly on others as well.
 - <b>Significantly more likely to be Elite Units and/or SuperHosts</b>
